@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaporWeather™</title>
+    <link rel="stylesheet" href="tables.css">
+    
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <label><strong>VaporWeather™</strong></label>
+        <a href="#dashboard">Dashboard</a>
+        <a href="index.html">Home</a>
+    </div>
+
+    <div class="mainContent">
+
+        <div class="profile-icon">
+            <img src="assets/pfp.jpg" alt="User Profile Picture">
+        </div>
+        
+      
+        <div class="table" id="table">
+            <div class="grid-item">
+                <table id = "forecast-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid-item">
+                Gemini
+                <br>
+                <div class="input-button-wrapper">
+                    <input type="text" class="geminiPrompt" placeholder="Ask Gemini!">
+                    <button class="locationButton" id="askButton">Ask!</button>
+                </div>
+                <textarea id = "output" placeholder="Gemini is thinking..."></textarea>
+            </div>
+        </div>
+
+        <div class="gemini" id="gemini">
+
+        </div>
+
+    </div>
+    <script src = "script2.js"></script>
+</body>
+</html>

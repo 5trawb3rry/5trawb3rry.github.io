@@ -1,0 +1,359 @@
+body
+{
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    flex:1;
+}
+
+
+.sidebar
+{
+    width:150px;
+    height: 136vh;
+    background-color: (0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 20px;
+    border: 2px solid #6d6471;
+    border-radius: 1px;
+    backdrop-filter: blur(15px);
+}
+
+.sidebar a {
+    padding: 15px;
+    font-family: Helvetica;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.profile-icon {
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+}
+
+.profile-icon img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+
+.mainContent
+{
+    flex-direction: row;
+    flex: 1;  
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    background-image: url('assets/bg1.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.sidebar label {
+    font-size: large;
+    padding: 10px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    color: white;
+    width: 950px;
+    height: 600px;
+    margin-top: 70px;
+    border: none;
+    margin-left: 200px;
+}
+
+.grid-item {
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0e2548; 
+    color: white;
+    text-align: center;
+}
+
+.input-field 
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0e2548;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black; 
+}
+
+
+
+.table .grid-item:nth-child(2) 
+{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: flex-start; 
+}
+
+
+.table .grid-item:nth-child(2) .input-button-wrapper
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    width: 100%; 
+}
+
+
+.table .grid-item:nth-child(2) input
+{
+    flex-grow: 1; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;
+}
+
+
+.table .grid-item:nth-child(2) button 
+{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;
+    cursor: pointer;
+}
+
+.table .grid-item:nth-child(2) textarea 
+{
+    width: 95%; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;
+    resize: vertical; 
+}
+
+.tableButton
+{   
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    border: 1px solid #6d6471;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px; 
+    margin-left: 200px; 
+    background-color: rgba(255, 255, 255, 0.3);  
+    border: 1px solid #0e2548;  
+}
+
+#forecast-table 
+{
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+#forecast-table th, #forecast-table td 
+{
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+#forecast-table th
+{
+    font-family: Helvetica;
+    font-weight: bold; 
+}
+
+#forecast-table td 
+{
+    border-left: none; 
+    border-right: none; 
+}
+
+.grid-item 
+{
+    padding: 10px; 
+}
+
+#output 
+{
+    height: 490px;
+    width: 95%; 
+}
+
+
+
+/*large screen*/
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .sidebar a 
+    {
+        padding: 10px;
+        font-size: medium;
+    }
+
+    .mainContent 
+    {
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .table
+    {
+        grid-template-columns: 1fr;
+        width: 80%; 
+        margin-left: 20px; 
+        margin-top: 20px;
+    }
+
+    .grid-item {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    #output
+    {
+        width: 100%; 
+    }
+
+    .tableButton 
+    {
+        margin-left: 20px; 
+    }
+}
+
+/*mobile phone*/
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 5px;
+    }
+
+    .sidebar a {
+        padding: 5px;
+        font-size: small;
+    }
+
+    .profile-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mainContent 
+    {
+        padding: 5px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .table 
+    {
+        grid-template-columns: 1fr; 
+        width: 95%; 
+        margin-left: 10px; 
+        margin-top: 10px;
+    }
+
+    .grid-item 
+    {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #output 
+    {
+        height: 300px; 
+        width: 100%;
+    }
+
+    .tableButton {
+        margin-left: 10px;
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/*smaller screen*/
+@media (max-width: 480px) 
+{
+    .sidebar 
+    {
+        width: 60px;
+        padding: 5px;
+    }
+
+    .sidebar a 
+    {
+        padding: 3px;
+        font-size: smaller;
+    }
+
+    .profile-icon img 
+    {
+        width: 25px;
+        height: 25px;
+    }
+
+    .mainContent 
+    {
+        padding: 5px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .table 
+    {
+        grid-template-columns: 1fr; 
+        width: 100%;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .grid-item 
+    {
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    #output 
+    {
+        height: 250px;
+        width: 100%;
+    }
+
+    .tableButton 
+    {
+        margin-left: 5px;
+        font-size: 12px;
+        padding: 5px;
+    }
+}
